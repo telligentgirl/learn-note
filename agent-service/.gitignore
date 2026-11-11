@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# 旧版演示
+/main.py
+/static/chat.html
+
+# 独立学习脚本
+/check_venv.py
+/langchain_summary.py
+/learn_agent.py
+/learn_java_api.py
+/learn_langchain.py
+/learn_long_term_memory.py
+/learn_mcp_client.py
+/learn_mcp_server.py
+/learn_sream.py
+/learn_summary_memory.py
+/learn_tool_recovery.py
+/learn_tools.py

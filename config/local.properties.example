@@ -1,0 +1,14 @@
+# Copy to config/local.properties and replace placeholders. Never commit real secrets.
+DB_URL=jdbc:mysql://localhost:3306/big_event
+DB_USERNAME=your_database_user
+DB_PASSWORD=replace_with_your_database_password
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+JWT_SECRET=replace_with_a_long_random_signing_secret
+# Optional: only needed for file uploads.
+OSS_ACCESS_KEY_ID=replace_with_your_access_key_id
+OSS_ACCESS_KEY_SECRET=replace_with_your_access_key_secret
+OSS_ENDPOINT=https://oss-cn-beijing.aliyuncs.com
+OSS_BUCKET=your_bucket_name
+OSS_REGION=cn-beijing

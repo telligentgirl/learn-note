@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.learn_note.mapper.ArticleMapper">
+<!--    动态sql-->
+<!--    id的值是对应方法的名字-->
+    <select id="list" resultType="com.example.learn_note.pojo.Article">
+        select * from article
+        <!-- 使用 XML 注释，避免 SQL 注释吞掉动态条件。 -->
+        <where>
+            <if test="categoryId!=null and categoryId!=''">
+                category_id=#{categoryId}
+            </if>
+            <if test="state!=null and state!=''">
+               and state=#{state}
+            </if>
+            and create_user=#{userid}
+        </where>
+        order by create_time desc, id desc
+    </select>
+    
+</mapper>
